@@ -1,0 +1,218 @@
+{
+  "project_name": "Resurge",
+  "theme": "Dark-first",
+  "archetype": "Nighttime Sanctuary (Archetype 5 + Warm Organic Accents)",
+  "design_philosophy": "Emotionally intelligent, deeply supportive, non-shaming, premium. Employs layered darkness, soft volumetric glows, and tactile surfaces to create a safe space for nighttime vulnerability.",
+  "colors": {
+    "background": {
+      "base": "#0A0A0C",
+      "surface": "#121215",
+      "surface_elevated": "#1A1A1E",
+      "overlay": "rgba(10, 10, 12, 0.85)"
+    },
+    "brand": {
+      "primary": "#D4A373", 
+      "primary_dim": "rgba(212, 163, 115, 0.2)",
+      "secondary": "#6B8F71",
+      "secondary_dim": "rgba(107, 143, 113, 0.2)"
+    },
+    "text": {
+      "primary": "#F4F4F5",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A",
+      "inverse": "#0A0A0C"
+    },
+    "semantic": {
+      "success": "#6B8F71",
+      "warning": "#E27D60",
+      "emergency": "#D95D39",
+      "emergency_dim": "rgba(217, 93, 57, 0.15)",
+      "info": "#4A7C59"
+    }
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Manrope",
+      "body": "DM Sans"
+    },
+    "hierarchy": {
+      "h1": { "size": "36px", "weight": "800", "letter_spacing": "-1px", "line_height": "42px" },
+      "h2": { "size": "28px", "weight": "700", "letter_spacing": "-0.5px", "line_height": "34px" },
+      "h3": { "size": "22px", "weight": "600", "letter_spacing": "0px", "line_height": "28px" },
+      "body_large": { "size": "18px", "weight": "400", "letter_spacing": "0px", "line_height": "26px" },
+      "body": { "size": "16px", "weight": "400", "letter_spacing": "0px", "line_height": "24px" },
+      "label": { "size": "14px", "weight": "700", "letter_spacing": "0.5px", "line_height": "20px", "text_transform": "uppercase" },
+      "caption": { "size": "13px", "weight": "400", "letter_spacing": "0px", "line_height": "18px" },
+      "hero_counter": { "size": "56px", "weight": "800", "letter_spacing": "-2px", "font_variant_numeric": "tabular-nums" }
+    }
+  },
+  "spacing_scale": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px"
+  },
+  "border_radius": {
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "full": "9999px"
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "colors.brand.primary",
+        "text_color": "colors.text.inverse",
+        "border_radius": "border_radius.full",
+        "padding": "spacing.md spacing.xl",
+        "typography": "typography.hierarchy.label"
+      },
+      "secondary": {
+        "background": "colors.background.surface_elevated",
+        "text_color": "colors.text.primary",
+        "border_radius": "border_radius.full",
+        "padding": "spacing.md spacing.xl"
+      },
+      "emergency": {
+        "background": "colors.semantic.emergency_dim",
+        "border": "1px solid colors.semantic.emergency",
+        "text_color": "colors.semantic.emergency",
+        "border_radius": "border_radius.full",
+        "padding": "spacing.lg"
+      }
+    },
+    "cards": {
+      "base": {
+        "background": "colors.background.surface",
+        "border_radius": "border_radius.lg",
+        "padding": "spacing.lg",
+        "border": "1px solid rgba(255, 255, 255, 0.05)",
+        "shadow": "0px 8px 24px rgba(0, 0, 0, 0.2)"
+      }
+    },
+    "inputs": {
+      "base": {
+        "background": "colors.background.surface",
+        "border": "1px solid rgba(255, 255, 255, 0.1)",
+        "border_radius": "border_radius.md",
+        "padding": "spacing.md",
+        "color": "colors.text.primary"
+      }
+    }
+  },
+  "screen_layouts": {
+    "onboarding": {
+      "layout": "vertical_stack",
+      "alignment": "center",
+      "spacing": "spacing.2xl",
+      "elements": [
+        "Warm greeting text (H1)",
+        "Non-judgmental intent input ('Why am I here?')",
+        "Target streak selector (horizontal scrollable pills)",
+        "Soft fade-in transitions between steps"
+      ]
+    },
+    "home": {
+      "layout": "scrollable_vertical",
+      "hero": {
+        "component": "sobriety_counter",
+        "layout": "circular_progress_ring",
+        "inner_content": "live_ticking_time (tabular nums, days/hrs/mins/secs)",
+        "glow_effect": "radial-gradient centered on ring (opacity 0.15, primary brand color)"
+      },
+      "sections": [
+        "Daily Motivation Quote (Glassmorphic card, background image)",
+        "Milestone preview (Next milestone in X days)",
+        "Quick Action Grid (Log Mood, Journal, Emergency)"
+      ]
+    },
+    "urge_surfing": {
+      "layout": "full_screen_focus",
+      "background": "colors.background.base",
+      "hero": "Box Breathing Animation (4-4-4-4)",
+      "animation_details": "Central expanding/contracting orb. Base color #6B8F71 (Sage), expands with blur shadow on inhale, holds, contracts on exhale. Reanimated shared values driven by useFrame or standard loop.",
+      "footer": "5-minute distraction timer with subtle progress bar"
+    },
+    "emergency": {
+      "layout": "modal_bottom_sheet",
+      "overlay": "heavy_blur",
+      "actions": [
+        "Instant Breathing (Navigates to Urge Surfing)",
+        "Cold Shower Timer (2 mins)",
+        "Physical Reset (Push-up tracker/challenge)"
+      ],
+      "tone": "Action-oriented, highly contrasting red/orange accents (#D95D39) but not alarming/stressful."
+    },
+    "relapse_logger": {
+      "layout": "step_by_step_wizard",
+      "tone": "Deeply empathetic. 'A slip is not a fall.'",
+      "elements": [
+        "Slider: 'How are you feeling right now?'",
+        "Trigger selection (Tags: Stress, Boredom, Late Night, etc.)",
+        "Reflection text area",
+        "Gentle reset counter action"
+      ]
+    },
+    "journal_progress": {
+      "layout": "tab_view",
+      "elements": [
+        "Weekly Mood Graph (Recharts or react-native-svg path)",
+        "Longest run stat block",
+        "Milestone badge grid"
+      ]
+    }
+  },
+  "animations": {
+    "engine": "react-native-reanimated",
+    "patterns": {
+      "screen_transition": "FadeInOut with subtle Y-axis slide (spring, mass: 1, damping: 20)",
+      "counter_tick": "LayoutAnimation or Reanimated entering/exiting for numbers",
+      "breathing_orb": "withRepeat(withTiming(scale: 1.5, duration: 4000), -1, true)"
+    }
+  },
+  "milestone_badges": {
+    "style": "Neumorphic/Glassmorphic 3D coins",
+    "levels": [
+      { "days": 1, "color": "#6B8F71", "icon": "seedling" },
+      { "days": 7, "color": "#4A7C59", "icon": "leaf" },
+      { "days": 30, "color": "#D4A373", "icon": "shield-check" },
+      { "days": 90, "color": "#E27D60", "icon": "fire" },
+      { "days": 365, "color": "#F4F4F5", "icon": "star" }
+    ]
+  },
+  "icons": {
+    "library": "@expo/vector-icons (Feather or Ionicons)",
+    "rules": "Stroke width 2px, rounded ends. No emojis."
+  },
+  "assets": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1765710029742-d92e3156a8f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbWluaW1hbGlzdCUyMGZvZyUyMG5hdHVyZSUyMGNhbG18ZW58MHx8fHwxNzc4MzE3NTIzfDA&ixlib=rb-4.1.0&q=85",
+        "category": "background",
+        "description": "Gray sky fading into dark water. Use for onboarding backgrounds or daily quote card background with heavy opacity overlay."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1773737020854-c7c63782de72?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwzfHxkYXJrJTIwbWluaW1hbGlzdCUyMGZvZyUyMG5hdHVyZSUyMGNhbG18ZW58MHx8fHwxNzc4MzE3NTIzfDA&ixlib=rb-4.1.0&q=85",
+        "category": "background",
+        "description": "Trees in a foggy field at dawn. Use for Urge Surfing success screen or milestone achieved."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762623598388-d73b4542894d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbWluaW1hbGlzdCUyMGZvZyUyMG5hdHVyZSUyMGNhbG18ZW58MHx8fHwxNzc4MzE3NTIzfDA&ixlib=rb-4.1.0&q=85",
+        "category": "texture",
+        "description": "Textured gray surface with bright light. Use as a subtle noise texture overlay for cards."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use standard React Native View and Text components, styled strictly with these colors and spacing.",
+    "Implement the live ticking counter using a fast updating state or Reanimated shared value to avoid React re-render freezing.",
+    "Use @expo/vector-icons (Feather) for all iconography.",
+    "Implement the 'breathing_orb' using react-native-reanimated for buttery smooth 60fps animations.",
+    "Do NOT use emojis. Rely entirely on the design system colors and icons.",
+    "Wrap interactive components in Pressable with animated scale down (0.95) on press-in for tactile feedback.",
+    "All interactive elements must include 'testID' attribute (e.g. testID='emergency-sos-button')."
+  ]
+}
