@@ -1,6 +1,6 @@
 # Resurge
 
-A premium, offline-first sobriety companion for iOS. All sensitive data is stored only on the device — the backend serves only curated public content (quotes, milestones, brain timeline) which is cached permanently on first launch.
+A premium, offline-first sobriety companion for iOS and Android. All sensitive data is stored only on the device — the backend serves only curated public content (quotes, milestones, brain timeline) which is cached permanently on first launch.
 
 ---
 
